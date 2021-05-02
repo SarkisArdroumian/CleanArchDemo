@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
+using CleanArch.API.Configurations;
 
 namespace CleanArch.API
 {
@@ -44,6 +45,8 @@ namespace CleanArch.API
             });
 
             services.AddMediatR(typeof(Startup));
+
+            services.RegisterAutoMapper();
 
             RegisterServices(services);
         }
